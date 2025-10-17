@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --azul-primario: #082572;
+    --blanco-secundario: #FAFAFA;
+    --morado-primario: #99A5C4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    box-shadow: 0 1px 4px rgb(0, 0, 0, 0.25);
+}
+
+.logo {
+    width: 15em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.category-div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart-section > i {
+    cursor: pointer;
+}
+
+.search {
+    width: 250px;
+    height: 35px;
+    padding: 0 40px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat right 10px center;
+    background-size: 18px;
+}
+
+.header .search:focus {
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.foto-perfil {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+main {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.main-sect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.price-item {
+    display: inline-block;
+    background-color: var(--morado-primario);
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border-radius: 6px;
+}
+
+.product-info > p {
+    font-weight: 400;
+}
+
+.product-info > p > span {
+    font-weight: 500;
+}
+
+.btn-add {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    border: none;
+    background: linear-gradient(to right, #082572, #99A5C4);
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.btn-add:hover {
+    transform: scale(1.05);
+}
+
+.category-name {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+
+.div-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    color: #343944;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.line {
+    height: 5px;
+    border-radius: 12px;
+    background-color: #343944;
+    width: 50%;
+}
+
+.sect-description > p {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    max-width: 50%;
+    width: 100%;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.sect-expan {
+    margin-bottom: 4rem;
+}
+
+.expa-items {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.item-card {
+    width: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.div-img {
+    background-color: var(--morado-primario);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.div-heart {
+    background-color: #FF500B;
+    padding: 0.25rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.div-heart > i {
+    color: white;
+    margin: 0 auto;
+}
+
+.board-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.div-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 75%;
+}
+
+.div-info > p {
+    font-weight: 500;
+    font-size: 1rem;
+    color: black;
+    margin: 0;
+}
+
+.div-text {
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.editorial {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.div-btn {
+    margin: 0 auto;
+}
+
+.add-to-cart-btn {
+    padding: 1rem;
+    border-radius: 100%;
+    border: none;
+    background: linear-gradient(to bottom, #082572, #99A5C4);
+    cursor: pointer;
+}
+
+.add-to-cart-btn > i {
+    color: white;
+}
+
+footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: var(--morado-primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sect-footer {
+    display: flex;
+    gap: 12rem;
+}
+
+.sect-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sect-info > p {
+    font-weight: 500;
+}
+
+.sect-info > div {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 300;
+    align-items: center;
+    text-align: center;
+}
+
+.sect-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.sect-nav > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sect-nav > div > p {
+    font-weight: 500;
+}
+
+.sect-nav > div > a {
+    font-weight: 300;
+}
