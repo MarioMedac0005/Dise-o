@@ -246,11 +246,14 @@ footer {
     min-height: 300px;
     background-color: var(--morado-primario);
     display: flex;
+    gap: 2rem;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .sect-footer {
+    margin-top: 2rem;
     display: flex;
     gap: 12rem;
 }
@@ -289,5 +292,9 @@ footer {
 }
 
 .sect-nav > div > a {
+    font-weight: 300;
+}
+
+.licence {
     font-weight: 300;
 }
