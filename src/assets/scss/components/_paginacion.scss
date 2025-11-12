@@ -1,0 +1,33 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.pagination > p {
+    font-weight: 300;
+}
+
+.pagination-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-items > i {
+    cursor: pointer;
+}
+
+.pagination-item {
+    padding: 0.5rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #CCCDD0;
+    border-radius: 8px;
+    cursor: pointer;
+}

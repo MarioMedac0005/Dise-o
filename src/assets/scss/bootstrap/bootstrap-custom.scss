@@ -1,0 +1,11 @@
+// 1️⃣ Importamos tus variables con namespace
+@use '../utils/variables' as vars;
+
+// 2️⃣ Sobrescribimos las variables de Bootstrap ANTES de importar bootstrap
+$primary: vars.$azul-primario;
+$secondary: vars.$naranja-primario;
+$info: vars.$morado-primario;
+$light: vars.$blanco-secundario;
+
+// 3️⃣ Importamos Bootstrap completo
+@import "../../../../node_modules/bootstrap/scss/bootstrap";

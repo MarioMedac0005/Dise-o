@@ -1,0 +1,23 @@
+@forward './bootstrap/bootstrap-custom.scss';
+
+@use './base/reset';
+@use './base/tipografia';
+@use './utils/variables';
+@use './utils/genericos';
+@use './utils/animations';
+
+@use './components/header';
+@use './components/banners';
+@use './sections/sect-cards';
+@use './pages/index';
+@use './pages/category';
+@use './pages/producto';
+@use './pages/sobre-nosotros';
+@use './pages/contacto';
+@use './pages/checkout' as checkout;
+@use './components/paginacion';
+@use './components/botones';
+@use './components/cards';
+@use './components/footer'; 
+
+

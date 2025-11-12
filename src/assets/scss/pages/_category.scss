@@ -1,0 +1,36 @@
+.category-name {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 4rem;
+}
+
+.div-title{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    color: #343944;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.line {
+    height: 5px;
+    border-radius: 12px;
+    background-color: #343944;
+}
+
+.div-filter {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter {
+    padding: 0.35rem 0.6rem 0.35rem 0.6rem;
+    border-radius: 8px;
+    text-align: center;
+}

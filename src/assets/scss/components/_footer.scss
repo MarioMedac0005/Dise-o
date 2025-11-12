@@ -1,0 +1,59 @@
+@use '../utils/variables' as vars;
+
+footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: vars.$morado-primario;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sect-footer {
+    margin-top: 2rem;
+    display: flex;
+    gap: 12rem;
+}
+
+.sect-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sect-info > p {
+    font-weight: 500;
+}
+
+.sect-info > div {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 300;
+    align-items: center;
+    text-align: center;
+}
+
+.sect-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.sect-nav > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sect-nav > div > p {
+    font-weight: 500;
+}
+
+.sect-nav > div > a {
+    font-weight: 300;
+}
+
+.licence {
+    font-weight: 300;
+}

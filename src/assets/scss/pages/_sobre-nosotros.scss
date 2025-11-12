@@ -1,0 +1,27 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.article1, .article2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.p-info {
+    max-width: 500px;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.article1 img, .article2 img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}

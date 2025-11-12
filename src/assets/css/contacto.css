@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --azul-primario: #082572;
+    --blanco-secundario: #FAFAFA;
+    --morado-primario: #99A5C4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    box-shadow: 0 1px 4px rgb(0, 0, 0, 0.25);
+}
+
+.logo {
+    width: 15em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.category-div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart-section > i {
+    cursor: pointer;
+}
+
+.search {
+    width: 250px;
+    height: 35px;
+    padding: 0 40px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat right 10px center;
+    background-size: 18px;
+}
+
+.header .search:focus {
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.foto-perfil {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.main-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sect-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 40%;
+    width: 100%;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+input {
+    padding: 1rem 1rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+    border: 1.5px solid #CCCDD0;
+}
+
+.obl {
+    color: red;
+}
+
+.btn-submit {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    border: none;
+    background: linear-gradient(to right, #082572, #99A5C4);
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    width: 100%;
+    min-height: 300px;
+    background-color: var(--morado-primario);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sect-footer {
+    margin-top: 2rem;
+    display: flex;
+    gap: 12rem;
+}
+
+.sect-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sect-info > p {
+    font-weight: 500;
+}
+
+.sect-info > div {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 300;
+    align-items: center;
+    text-align: center;
+}
+
+.sect-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.sect-nav > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sect-nav > div > p {
+    font-weight: 500;
+}
+
+.sect-nav > div > a {
+    font-weight: 300;
+}
+
+.licence {
+    font-weight: 300;
+}

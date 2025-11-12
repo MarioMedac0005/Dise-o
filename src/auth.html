@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeepleCo - Login</title>
+
+  <link href="./assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+
+        <!-- Card -->
+        <div class="card shadow rounded-4">
+          <div class="card-body p-4">
+
+            <img class="d-block mx-auto my-4 img-fluid w-50" src="./assets/img/logo.svg" alt="Logo de MeepleCo">
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mb-4" id="formTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                  type="button" role="tab">Login</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button"
+                  role="tab">Registro</button>
+              </li>
+            </ul>
+
+            <!-- Tab content -->
+            <div class="tab-content">
+
+              <!-- Login -->
+              <div class="tab-pane fade show active" id="login" role="tabpanel">
+                <form>
+                  <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="marioortiz@example.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="********" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100" data-bs-toggle="modal"
+                    data-bs-target="#alertModal">Iniciar sesión</button>
+                </form>
+              </div>
+
+              <!-- Registro -->
+              <div class="tab-pane fade" id="register" role="tabpanel">
+                <form>
+                  <div class="mb-3">
+                    <label for="registerName" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="registerName" placeholder="Mario Ortiz" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerEmail" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="registerEmail" placeholder="marioortiz@example.com"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="********" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerConfirm" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="registerConfirm" placeholder="********" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 text-light" data-bs-toggle="modal"
+                    data-bs-target="#alertModal">Registrarse</button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de notificación -->
+  <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="alertModalLabel">¡Éxito!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+          La acción se ha completado correctamente.
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle (incluye Popper) -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

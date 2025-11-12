@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeepleCo - Checkout</title>
+  <!-- Bootstrap CSS custom -->
+  <link href="./assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100">
+
+  <div class="checkout-container bg-white shadow p-5 rounded-4" style="max-width: 900px;">
+    <div class="checkout-header text-center">
+      <img class="d-block mx-auto my-4 img-fluid w-50" src="./assets/img/logo.svg" alt="Logo de MeepleCo">
+    </div>
+
+    <form>
+      <div class="row g-4">
+        <!-- Datos del cliente -->
+        <div class="col-md-6">
+          <h5 class="mb-3 fw-bold">Datos del Cliente</h5>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="juan@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" placeholder="+34 600 000 000" required>
+          </div>
+        </div>
+
+        <!-- Dirección de envío -->
+        <div class="col-md-6">
+          <h5 class="mb-3 fw-bold">Dirección de Envío</h5>
+          <div class="mb-3">
+            <label for="direccion" class="form-label ">Dirección</label>
+            <input type="text" class="form-control" id="direccion" placeholder="Calle Ejemplo 123" required>
+          </div>
+          <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="ciudad" placeholder="Madrid" required>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="provincia" class="form-label">Provincia</label>
+              <input type="text" class="form-control" id="provincia" placeholder="Madrid" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cp" class="form-label">Código Postal</label>
+              <input type="text" class="form-control" id="cp" placeholder="28001" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <!-- Resumen del pedido -->
+      <div class="summary-box mb-4">
+        <h5 class="mb-3 fw-bold" style="color: var(--bs-primary-dark)">Resumen del Pedido</h5>
+        <div class="summary-item d-flex justify-content-between">
+          <span>Catan</span>
+          <span>€39.99</span>
+        </div>
+        <div class="summary-item d-flex justify-content-between">
+          <span>Dixit</span>
+          <span>€29.99</span>
+        </div>
+        <div class="summary-item d-flex justify-content-between">
+          <span>Carcassonne</span>
+          <span>€24.99</span>
+        </div>
+        <hr>
+        <div class="summary-item fw-bold d-flex justify-content-between">
+          <span>Total</span>
+          <span style="color: var(--bs-primary)">€94.97</span>
+        </div>
+      </div>
+
+      <!-- Botón de pago -->
+      <button type="button" class="btn btn-primary w-100 py-2" data-bs-toggle="modal" data-bs-target="#paymentModal">
+        Pagar Ahora
+      </button>
+    </form>
+  </div>
+
+  <!-- Modal de confirmación -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-3 overflow-hidden">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="paymentModalLabel">¡Pago realizado!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center text-dark">
+          <p>Tu compra se ha completado con éxito.</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
