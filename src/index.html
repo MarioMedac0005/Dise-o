@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,18 @@
     <!-- Link CSS -->
     <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
     <link rel="stylesheet" href="./assets/css/main.css">
-    <!-- Link Bootstrap 5.3.8 -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Link Icons -->
     <script src="https://kit.fontawesome.com/a8de2b40bc.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
+
+    <audio id="musica" autoplay>
+        <source src="./assets/audio/lounge-music.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
     <header class="header">
 
         <img class="logo" src="./assets/img/logo.svg" alt="Logo MeepleCo">
@@ -42,7 +48,7 @@
 
             <i class="fa-solid fa-cart-shopping"></i>
 
-            <img class="foto-perfil" src="./assets/img/foto-perfil.png" alt="Foto perfil">
+            <a href="./auth.html" class="btn btn-primary">Login</a>
 
         </div>
 
@@ -51,6 +57,99 @@
     <main>
 
         <img class="banner" src="./assets/img/banner-1.webp" alt="Banner Inicial">
+
+        <!-- 🔹 Sección de Promociones -->
+        <section class="promociones container text-center my-5">
+            <div class="p-4 rounded shadow-sm" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                <h3 class="mb-3 text-primary">
+                    <i class="fa-solid fa-tags"></i> ¡Ofertas exclusivas del mes!
+                </h3>
+                <p class="mb-4 text-muted">
+                    Aprovecha descuentos especiales en tus juegos favoritos.
+                    ¡Solo por tiempo limitado!
+                </p>
+                <button type="button" class="btn btn-primary px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                    data-bs-target="#ofertasModal">
+                    Ver promociones destacadas
+                </button>
+            </div>
+        </section>
+
+        <!-- 🔸 Modal Bootstrap con Carrusel -->
+        <div class="modal fade" id="ofertasModal" tabindex="-1" aria-labelledby="ofertasModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title fw-bold" id="ofertasModalLabel">🎯 Ofertas destacadas del mes</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body p-4">
+                        <p class="text-center text-muted mb-4">
+                            ¡Aprovecha descuentos increíbles en tus juegos favoritos! Estas promociones son por tiempo
+                            limitado ⏳
+                        </p>
+
+                        <!-- 🌀 Carrusel Bootstrap -->
+                        <div id="carouselOfertas" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <!-- 🧩 Slide 1 -->
+                                <div class="carousel-item active text-center">
+                                    <img src="./assets/img/boardgames/catan.png" class="d-block mx-auto rounded mb-3"
+                                        style="max-width: 250px;" alt="Catan el Juego">
+                                    <h5 class="fw-bold">Catan el Juego</h5>
+                                    <p class="text-success fw-semibold mb-1">20% de descuento</p>
+                                    <p class="text-muted">Antes 50€, ahora <strong>40€</strong></p>
+                                </div>
+
+                                <!-- 🧩 Slide 2 -->
+                                <div class="carousel-item text-center">
+                                    <img src="./assets/img/boardgames/dune_imperium.webp"
+                                        class="d-block mx-auto rounded mb-3" style="max-width: 250px;"
+                                        alt="Dune Imperium">
+                                    <h5 class="fw-bold">Dune Imperium</h5>
+                                    <p class="text-success fw-semibold mb-1">15% de descuento</p>
+                                    <p class="text-muted">Antes 65€, ahora <strong>55.25€</strong></p>
+                                </div>
+
+                                <!-- 🧩 Slide 3 -->
+                                <div class="carousel-item text-center">
+                                    <img src="./assets/img/boardgames/aventureros_al_tren.png"
+                                        class="d-block mx-auto rounded mb-3" style="max-width: 250px;"
+                                        alt="Aventureros al tren">
+                                    <h5 class="fw-bold">Aventureros al tren</h5>
+                                    <p class="text-success fw-semibold mb-1">25% de descuento</p>
+                                    <p class="text-muted">Antes 60€, ahora <strong>45€</strong></p>
+                                </div>
+                            </div>
+
+                            <!-- Controles -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOfertas"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-arrow-left" style="color: #000000;"></i>
+                                </span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselOfertas"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-arrow-right" style="color: #050505;"></i>
+                                </span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="./promociones.html" class="btn btn-primary">Ver todas las promociones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="category">
 
@@ -63,7 +162,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/army_of_the_dead.png" alt="Army of the Dead">
+                            <img class="board-img" src="./assets/img/boardgames/army_of_the_dead.png"
+                                alt="Army of the Dead">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -75,7 +175,7 @@
                                 <span class="editorial">CMON</span>
                                 <span class="price">99.95€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -103,7 +203,7 @@
                                 <span class="editorial">DEVIR</span>
                                 <span class="price">40.50€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -119,7 +219,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/dune_imperium.webp" alt="Dune Imperium Insurreción">
+                            <img class="board-img" src="./assets/img/boardgames/dune_imperium.webp"
+                                alt="Dune Imperium Insurreción">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -131,7 +232,7 @@
                                 <span class="editorial">ASMODE</span>
                                 <span class="price">54.32€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -147,7 +248,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/atlantis_exodus.jpg" alt="Atlantis Exodus">
+                            <img class="board-img" src="./assets/img/boardgames/atlantis_exodus.jpg"
+                                alt="Atlantis Exodus">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -159,7 +261,7 @@
                                 <span class="editorial">ARRAKIS GAMES</span>
                                 <span class="price">58.75€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -175,7 +277,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/aventureros_al_tren.png" alt="Aventureros al tren">
+                            <img class="board-img" src="./assets/img/boardgames/aventureros_al_tren.png"
+                                alt="Aventureros al tren">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -187,7 +290,7 @@
                                 <span class="editorial">ASMODE</span>
                                 <span class="price">45.87€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -225,7 +328,7 @@
                                 <span class="editorial">TRANJIS</span>
                                 <span class="price">14.95€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -241,7 +344,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/pelusas.png" alt="Pelusas juego de mesa">
+                            <img class="board-img" src="./assets/img/boardgames/pelusas.png"
+                                alt="Pelusas juego de mesa">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -253,7 +357,7 @@
                                 <span class="editorial">MERCURIO</span>
                                 <span class="price">12.85€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -269,7 +373,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/nucleum_australia.jpg" alt="Nucleum Australia">
+                            <img class="board-img" src="./assets/img/boardgames/nucleum_australia.jpg"
+                                alt="Nucleum Australia">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -281,7 +386,7 @@
                                 <span class="editorial">ASMODE</span>
                                 <span class="price">52.99€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -309,7 +414,7 @@
                                 <span class="editorial">DEVIR</span>
                                 <span class="price">45.95€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -325,7 +430,8 @@
                     <div class="item-card">
 
                         <div class="div-img">
-                            <img class="board-img" src="./assets/img/boardgames/crucero_galactico.png" alt="Crucero Galactico">
+                            <img class="board-img" src="./assets/img/boardgames/crucero_galactico.png"
+                                alt="Crucero Galactico">
                             <div class="div-heart">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
@@ -337,7 +443,7 @@
                                 <span class="editorial">ASMODE</span>
                                 <span class="price">105.95€</span>
                             </div>
-                            
+
                             <div class="div-btn">
                                 <button class="add-to-cart-btn">
                                     <i class="fa-solid fa-plus"></i>
@@ -351,6 +457,21 @@
             </article>
 
         </section>
+
+        <!-- Sección de Video -->
+        <section class="video-section my-5">
+            <div class="container text-center">
+                <div class="video-container">
+                    <video autoplay loop muted class="video-player rounded-4">
+                        <source src="./assets/video/video.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+
+
 
         <section class="section-payment">
 
@@ -421,7 +542,7 @@
                     <a href="#">Novedades</a>
 
                     <a href="#">Ofertas</a>
-                    
+
                     <a href="#">Proximamente</a>
 
                 </div>
@@ -461,11 +582,18 @@
         </section>
 
         <section class="licence">
-            <a href="https://github.com/MarioMedac0005/Dise-o">Meeple&Co</a> © by <a href="https://github.com/MarioMedac0005">Mario Ortiz</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+            <a href="https://github.com/MarioMedac0005/Dise-o">Meeple&Co</a> © by <a
+                href="https://github.com/MarioMedac0005">Mario Ortiz</a> is licensed under <a
+                href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img
+                src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+                style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+                src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+                style="max-width: 1em;max-height:1em;margin-left: .2em;">
         </section>
 
     </footer>
     <!-- Link Bootstrap JS -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
